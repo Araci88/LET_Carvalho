@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* HRADER Y FOOTER MOBILE FIRST */
+/* HEADER Y FOOTER MOBILE FIRST */
 
 .header{
     background-color: rgb(17, 17, 17);
@@ -249,29 +249,10 @@ a{
 
     .main_galeria{
         background-color: rgb(233, 229, 229);
-        display: grid;
-        grid-template-columns: 90%;
-        grid-template-rows: 60px 50px 200px 200px 200px 200px 200px 200px 200px 50px 200px 200px 200px 50px 200px 200px 200px;
-        grid-template-areas: "g1"
-                             "g2"
-                             "g3"
-                             "g4"
-                             "g5"
-                             "g6"
-                             "g7"
-                             "g8"
-                             "g9"
-                             "g10"
-                             "g11"
-                             "g12"
-                             "g13"
-                             "g14"
-                             "g15"
-                             "g16"
-                             "g17";
-        row-gap: 30px;
-        justify-content: space-around;
-        align-content: space-around;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     .titulo1_galeria{
@@ -282,15 +263,17 @@ a{
     }
         
     .titulo_galeria{
-        grid-area: g1;
         background-image: url("../img/titulogaleria1.jpg");
         background-repeat: repeat;
+        width: 100%;
     }
-        
-    .titulo_el_club{
-        grid-area: g2;
+    
+    .titulos_gal{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
-        
+
     .titulo2_galeria{
         color: rgb(188, 252, 61);
         font-size: 30px;
@@ -299,83 +282,69 @@ a{
         font-weight: bold;
         background-color: brown;
     }
-      
+
+    .fotos_club{
+        justify-content: space-evenly;
+        padding-left: 10%;
+    }
+     
+    .img_club1{
+        width: 90%;  
+    }
+
     .foto_club1{
         width: 100%;
         height: 100%;
     }
 
-    .img_club1{
-        grid-area: g3;
-        width: 80%;
+    .img_club2{
+        width: 90%;
         height: 90%;
-        justify-self: center;
-        align-self: center;
     }
         
     .foto_club2{
         width: 100%;
         height: 100%;
     }
-        
-    .img_club2{
-        grid-area: g4;
-        width: 80%;
+     
+    .img_club3{
+        width: 90%;
         height: 90%;
-        justify-self: center;
-        align-self: center;
     }
-        
+
     .foto_club3{
         width: 100%;
         height: 100%;
     }
-        
-    .img_club3{
-        grid-area: g5;
-        width: 80%;
+
+    .img_club4{
+        width: 90%;
         height: 90%;
-        justify-self: center;
-        align-self: center;
     }
         
     .foto_club4{
         width: 100%;
         height: 100%;
     }
-        
-    .img_club4{
-        grid-area: g6;
-        width: 80%;
+     
+    .img_club5{
+        width: 90%;
         height: 90%;
-        justify-self: center;
-        align-self: center;
     }
-        
+
     .foto_club5{
         width: 100%;
         height: 100%;
     }
-        
-    .img_club5{
-        grid-area: g7;
-        width: 80%;
+    
+    .img_club6{
+        width: 90%;
         height: 90%;
-        justify-self: center;
-        align-self: center;
     }
-        
+
     .foto_club6{
         width: 100%;
-        height: 100%;
-    }
-        
-    .img_club6{
-        grid-area: g8;
-        width: 80%;
-        height: 90%;
-        justify-self: center;
-        align-self: center;
+        height:60%;
     }
         
     .videoclub1{
@@ -384,15 +353,12 @@ a{
     }
         
     .video_club{
-        grid-area: g9;
         width: 80%;
-        height: 90%;
-        justify-self: center;
-        align-self: center;
+        padding-top: 20px;
     }
-        
-    .titulo_alumnos{
-        grid-area: g10;
+
+    .fotos_alumnos{
+        padding-left: 10%;
     }
         
     .foto_alumnos7{
@@ -401,11 +367,8 @@ a{
     }
         
     .img_al7{
-        grid-area: g11;
-        width: 80%;
+        width: 90%;
         height: 90%;
-        justify-self: center;
-        align-self: center;
     }
         
     .foto_alumnos8{
@@ -414,11 +377,8 @@ a{
     }
         
     .img_al8{
-        grid-area: g12;
-        width: 80%;
+        width: 100%;
         height: 90%;
-        justify-self: center;
-        align-self: center;
     }
         
     .foto_alumnos9{
@@ -427,15 +387,12 @@ a{
     }
         
     .img_al9{
-        grid-area: g13;
-        width: 80%;
+        width: 90%;
         height: 90%;
-        justify-self: center;
-        align-self: center;
     }
-        
-    .titulo_pet{
-        grid-area: g14;
+
+    .fotos_pet{
+        padding-left: 10%;
     }
         
     .foto_pet10{
@@ -444,11 +401,8 @@ a{
     }
         
     .img_pet10{
-        grid-area: g15;
-        width: 80%;
+        width: 90%;
         height: 90%;
-        justify-self: center;
-        align-self: center;
     }
         
     .foto_pet11{
@@ -457,11 +411,8 @@ a{
     }
         
     .img_pet11{
-        grid-area: g16;
-        width: 80%;
+        width: 90%;
         height: 90%;
-        justify-self: center;
-        align-self: center;
     }
         
     .foto_pet12{
@@ -470,185 +421,138 @@ a{
     }
         
     .img_pet12{
-        grid-area: g17;
-        width: 80%;
+        width: 90%;
         height: 90%;
-        justify-self: center;
-        align-self: center;
     }
 
 /* GALERIA PC */
 
 @media screen and (min-width:600px){
     .main_galeria{
-        background-color: rgb(190, 188, 188);
-        display: grid;
-        grid-template-columns: 30% 30% 30%;
-        grid-template-rows: 100px 100px 250px 250px 400px 100px 250px 100px 250px;
-        grid-template-areas: "g1 g1 g1"
-                            "g2 g2 g2"
-                            "g3 g4 g5"
-                            "g6 g7 g8"
-                            "g9 g9 g9"
-                            "g10 g10 g10"
-                            "g11 g12 g13"
-                            "g14 g14 g14"
-                            "g15 g16 g17";
-        row-gap: 20px;
-        justify-content: space-around;
+        width: 100%;
         padding-bottom: 20px;
     }
 
     .titulo1_galeria{
-        color:  rgb(17, 17, 17);
-        text-align: center;
-        font-family: 'Bebas Neue', cursive;
         font-size: 80px;
     }
 
     .titulo_galeria{
-        grid-area: g1;
-        background-image: url("../img/titulogaleria1.jpg");
-        background-repeat: repeat;
+        height: 100px;
+        width: 100%;
     }
 
     .titulo_el_club{
-        grid-area: g2;
         padding-top: 20px;
+        height: 100px;
+        width: 100%;
     }
 
     .titulo2_galeria{
-        color: rgb(188, 252, 61);
         font-size: 60px;
-        text-align: center;
-        font-family: 'The Nautigal', cursive;
-        font-weight: bold;
-        background-color: brown;
+    }
+
+    .fotos_club{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 350px 350px;
+        grid-template-areas: "g1 g2 g3"
+                             "g4 g5 g6";
+        justify-content: space-around;
+        padding-left: 0%;
     }
 
     .img_club1{
-        grid-area: g3;
+        grid-area: g1;
+        width: 100%;
     }
 
     .foto_club1{
-        width: 100%;
-        height: 100%;
-    }
-
-    .foto_club2{
-        width: 100%;
-        height: 100%;
+        height: 90%;
     }
 
     .img_club2{
-        grid-area: g4;
-    }
-
-    .foto_club3{
+        grid-area: g2;
         width: 100%;
-        height: 100%;
     }
 
     .img_club3{
-        grid-area: g5;
-    }
-
-    .foto_club4{
+        grid-area: g3;
         width: 100%;
-        height: 100%;
     }
 
     .img_club4{
-        grid-area: g6;
-    }
-
-    .foto_club5{
+        grid-area: g4;
         width: 100%;
-        height: 100%;
     }
 
     .img_club5{
-        grid-area: g7;
-    }
-
-    .foto_club6{
+        grid-area: g5;
         width: 100%;
-        height: 100%;
     }
 
     .img_club6{
-        grid-area: g8;
+        grid-area: g6;
+        width: 100%;
     }
 
-    .videoclub1{
-        width: 100%;
+    .foto_club6{
         height: 100%;
     }
 
     .video_club{
-        grid-area: g9;
+        height: 400px;
     }
 
-    .titulo_alumnos{
-        grid-area: g10;
-    }
-
-    .foto_alumnos7{
-        width: 100%;
-        height: 100%;
+    .fotos_alumnos{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 350px;
+        grid-template-areas: "g7 g8 g9";
+        justify-content: space-around;
+        padding-left: 0%;
+        padding-right: 0%;
     }
 
     .img_al7{
-        grid-area: g11;
-    }
-
-    .foto_alumnos8{
+        grid-area: g7;
         width: 100%;
-        height: 100%;
     }
 
     .img_al8{
-        grid-area: g12;
-    }
-
-    .foto_alumnos9{
+        grid-area: g8;
         width: 100%;
-        height: 100%;
     }
 
     .img_al9{
-        grid-area: g13;
-    }
-
-    .titulo_pet{
-        grid-area: g14;
-    }
-
-    .foto_pet10{
+        grid-area: g9;
         width: 100%;
-        height: 100%;
+    }
+
+    .fotos_pet{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 350px;
+        grid-template-areas: "g10 g11 g12";
+        row-gap: 20px;
+        justify-content: space-around;
+        padding-left: 0%;
+        padding-right: 0%;
     }
 
     .img_pet10{
-        grid-area: g15;
-    }
-
-    .foto_pet11{
+        grid-area: g10;
         width: 100%;
-        height: 100%;
     }
 
     .img_pet11{
-        grid-area: g16;
-    }
-
-    .foto_pet12{
+        grid-area: g11;
         width: 100%;
-        height: 100%;
     }
 
     .img_pet12{
-        grid-area: g17;
+        grid-area: g12;
+        width: 100%;
     }
 }
 
