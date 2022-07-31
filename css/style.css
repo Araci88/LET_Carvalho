@@ -430,7 +430,6 @@ a{
 @media screen and (min-width:600px){
     .main_galeria{
         width: 100%;
-        padding-bottom: 20px;
     }
 
     .titulo1_galeria{
@@ -440,6 +439,11 @@ a{
     .titulo_galeria{
         height: 100px;
         width: 100%;
+    }
+
+    .titulos_gal{
+        padding-bottom: 5px;
+        padding-top: 5px;
     }
 
     .titulo_el_club{
@@ -512,6 +516,7 @@ a{
         justify-content: space-around;
         padding-left: 0%;
         padding-right: 0%;
+        align-items: center;
     }
 
     .img_al7{
@@ -533,8 +538,7 @@ a{
         display: grid;
         grid-template-columns: 33% 33% 33%;
         grid-template-rows: 350px;
-        grid-template-areas: "g10 g11 g12";
-        row-gap: 20px;
+        grid-template-areas: "g10 g11 g12"; 
         justify-content: space-around;
         padding-left: 0%;
         padding-right: 0%;
@@ -606,9 +610,8 @@ a{
 
 /*BODY Y MAIN SERVICIOS*/
 
-/* SERVICIOS MOBILE*/
+/* SERVICIOS MOBILE */
 
-@media only screen and (max-width: 500px){
     .main_servicios{
         background-color: rgb(236, 236, 236);
         background-image: url(../img/fondoserv1.jpg);
@@ -776,18 +779,11 @@ a{
         height: 90%;
         border: 5px solid black;
     }
-}
 
 /* SERVICIOS PC*/
 
-@media only screen and (min-width: 500px){
+@media screen and (min-width: 600px){
     .main_servicios{
-        background-color: rgb(236, 236, 236);
-        background-image: url(../img/fondoserv1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 100px 150px 200px 250px 250px;
         grid-template-areas: "s1"
@@ -796,134 +792,158 @@ a{
                              "s4"
                              "s5";
         align-content: space-around;
-        padding-bottom: 50px;
+        padding-bottom: 10px;
     }
     
     .titulo1_servicios{
-        color:  rgb(17, 17, 17);
-        text-align: center;
-        font-family: 'Bebas Neue', cursive;
         font-size: 80px;
     }
     
     .titulo_servicios{
         grid-area: s1;
-        background-image: url(../img/tituloservicios.jpg);
         background-repeat: repeat;
     }
     
     .parrafos_clases{
         grid-area: s2;
         align-self: center;
-        background-color: rgb(255, 108, 55);
-        color: rgb(17, 17, 17);
         text-align: center;
         font-size: 30px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
     }
     
     .fila3_servicios{
         grid-area: s3;
-        display: flex;
+        flex-direction: row;
         justify-content: space-around;
         align-items: center;
     }
     
     .fila4_servicios{
         grid-area: s4;
-        display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
-        align-items: center;
     }
     
     .fila5_servicios{
         grid-area: s5;
-        display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        align-items: center;
-        padding-top: 50px;
     }
     
     .alquiler{
         grid-area: s3;
         width: 30%;
-        text-align: center;
-        font-family: 'Cormorant SC', serif;
         font-size: 25px; 
         font-weight: bolder;
-        padding-left: 20px;  
     }
     
     .clases_ig{
         grid-area: s4;
         width: 25%;
-        text-align: center;
-        font-family: 'Cormorant SC', serif;
         font-size: 25px;
-        font-weight: bolder;
-        padding-left: 30px;    
+        font-weight: bolder;  
+        padding-left: 20px;
     }
     
     .entrenamiento{
         grid-area: s5;
         width: 30%;
-        text-align: center;
-        font-family: 'Cormorant SC', serif;
         font-size: 25px;
         font-weight: bolder;
-        padding-right: 30px;
+        padding-right: 10px;
     }
     
     .escuelita{
         grid-area: s10;
         width: 30%;
-        text-align: center;
-        font-family: 'Cormorant SC', serif;
         font-size: 30px;
         font-weight: bolder;
     }
-    
+
     .foto_serv1{
-        width: 90%;
-        height: 90%;
-        border-radius: 90%;
-        border: 5px solid black;
+        width: 30%;
+        height: 150%;
     }
-    
+
     .foto_serv3{
-        width: 90%;
-        height: 90%;
-        border-radius: 90%;
-        border: 5px solid black;
-    }
-    
-    .foto_serv2{
-        width: 80%;
-        height: 80%;
-        border: 5px solid black;
-    }
-    
-    .foto_serv4{
-        width: 90%;
-        height: 90%;
-        border: 5px solid black;
-    }
-    
-    .foto_serv5{
-        width: 90%;
-        height: 90%;
-        border: 5px solid black;
+        width: 30%;
+        height: 150%;
     }
 }
 
 /* BODY Y MAIN TORNEOS */
+
+ /* TORNEOS MOBILE*/
 
 .main_torneos{
     background-color: rgb(36, 34, 34);
     background-image: url(../img/fondotorneos3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.titulo_torneos{
+    color:  rgb(17, 17, 17);
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+    background-image: url(../img/titulotorneos.jpg);
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+.titulo2_torneos{
+    color: rgb(17, 17, 17);
+    text-align: center;
+    font-family: 'roboto';
+    font-weight: bold; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+    
+.publi_torneos{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.foto_torneos1{
+    width: 60%;
+    align-self: center;
+}
+
+.foto_torneos2{
+    width: 60%;
+    align-self: center;
+}
+    
+.parrafo_torneos{
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    color: rgb(180, 240, 60);
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+    
+.inscribite_torneos{
+    align-self: center;
+}
+    
+.th_torneos{
+    border: 2px solid black;
+    font-family: 'Roboto';
+    color: brown;
+    text-align: center;
+}
+    
+.tabla_torneos td{
+    border:2px solid black;
+    font-family: 'Roboto';
+    color: brown;
+    text-align: center;
 }
 
 .jugadores_torneos{
@@ -933,135 +953,41 @@ a{
     padding-bottom: 20px;
 }
 
-  /* TORNEOS MOBILE*/
-
-@media only screen and (max-width: 500px){
-
-    .titulo_torneos{
-        color:  rgb(17, 17, 17);
-        text-align: center;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 60px;
-        background-image: url(../img/titulotorneos.jpg);
-        background-position: center;
-        margin-bottom: 10px;
-    }
-
-    .titulo2_torneos{
-        color: rgb(17, 17, 17);
-        text-align: center;
-        font-family: 'roboto';
-        font-weight: bold; 
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-    
-    .publi_torneos{
-        display: flex;
-        flex-direction: column;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    .foto_torneos1{
-        width: 60%;
-        align-self: center;
-    }
-
-    .foto_torneos2{
-        width: 60%;
-        align-self: center;
-    }
-    
-    .parrafo_torneos{
-        font-family: 'Bebas Neue';
-        font-size: 20px;
-        color: rgb(180, 240, 60);
-        letter-spacing: 1px;
-        line-height: 20px;
-        text-align: center;
-        padding-bottom: 20px;
-    }
-    
-    .inscribite_torneos{
-        align-self: center;
-    }
-    
-    .th_torneos{
-        border: 2px solid black;
-        font-family: 'Roboto';
-        color: brown;
-        text-align: center;
-    }
-    
-    .tabla_torneos td{
-        border:2px solid black;
-        font-family: 'Roboto';
-        color: brown;
-        text-align: center;
-    
-    }
-}
-
 /* TORNEOS PC*/
 
-@media only screen and (min-width: 500px){
+@media screen and (min-width: 500px){
 
     .titulo_torneos{
-        color:  rgb(17, 17, 17);
-        text-align: center;
-        font-family: 'Bebas Neue', cursive;
         font-size: 80px;
-        background-image: url(../img/titulotorneos.jpg);
-        background-position: center;
         margin-bottom: 20px;
         padding-bottom: 20px;
     }
     
     .titulo2_torneos{
-        color: rgb(17, 17, 17);
-        text-align: center;
-        font-family: 'roboto';
-        font-weight: bold;
         font-size: 40px;
         padding-bottom: 20px;
     }
     
     .publi_torneos{
-        display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        padding-bottom: 20px;
     }
 
+    .foto_torneos1{
+        width: 33%;
+    }
     .foto_torneos2{
         width: 30%;
     }
     
     .parrafo_torneos{
-        font-family: 'Bebas Neue';
         font-size: 20px;
-        color: yellowgreen;
         letter-spacing: 3px;
         line-height: 25px;
-        text-align: center;
     }
     
     .inscribite_torneos{
         margin-bottom: 20px;
-    }
-    
-    .th_torneos{
-        border: 2px solid black;
-        font-family: 'Roboto';
-        color: brown;
-        text-align: center;
-    }
-    
-    .tabla_torneos td{
-        border:2px solid black;
-        font-family: 'Roboto';
-        color: brown;
-        text-align: center;
     }
 }
 
@@ -1069,7 +995,7 @@ a{
 
    /* CONTACTO MOBILE */
 
-@media only screen and (max-width: 500px){
+
     .main_contacto{
         background-color: gray;
         background-image: url(../img/fondocontacto1.jpg);
@@ -1143,24 +1069,17 @@ a{
         width: 80%;
         height: 80%;
     }
-}
 
    /* CONTACTO PC*/
 
-@media only screen and (min-width: 500px){
+@media only screen and (min-width: 600px){
     .main_contacto{
-        background-color: gray;
-        background-image: url(../img/fondocontacto1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
     }
     
     .titulo_contacto{
-        font-family: 'Bebas Neuer';
-        color: black;
-        text-align: center;
-        font-family: 'Bebas Neue', cursive;
         font-size: 80px;
     }
     
@@ -1178,19 +1097,12 @@ a{
     }
     
     .leg_contacto{
-        font-family: 'The Nautigal', cursive;
         font-size: 50px;
     }
     
     .fil_contacto{
-        display: flex;
-        flex-direction: column;
         width: 30%;
         border-width: 10px;
-        font-family: 'Roboto';
-        font-weight: bold;
-        text-align: center;
-        border-color: black;
     }
     
     .cont_label{
@@ -1200,23 +1112,10 @@ a{
 
     .cont_seldni{
         width: 90%;
-        align-self: center;
     }
     
     .in_form{
         width: 90%;
-        font-family: 'Roboto';
-        align-self: center;
-    }
-    
-    .boton_form{
-        width: 60%;
-        background-color: gray;
-        font-family: 'Roboto';
-        font-weight: bold;
-        margin-top: 7px;
-        margin-bottom: 7px;
-        align-self: center;
     }
 
     .boton_form:hover{
@@ -1238,15 +1137,10 @@ a{
     
     .div_telefono{
         grid-area: c2;
-        margin-top: 30px;
-        font-family: 'Roboto';
-        font-weight: bolder;
-        text-align: center;
-        font-size: 20px;
-        line-height: 40px;
     }
     
     .maps_contacto{
-        padding-top: 10px;
+        width: 100%;
+        padding-bottom: 10px;
     }
 }
