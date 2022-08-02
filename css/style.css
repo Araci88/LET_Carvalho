@@ -730,7 +730,6 @@ a{
     .foto_serv1{
         width: 90%;
         height: 90%;
-        border-radius: 90%;
         border: 5px solid black;
     }
 
@@ -742,7 +741,6 @@ a{
     .foto_serv3{
         width: 90%;
         height: 90%;
-        border-radius: 90%;
         border: 5px solid black;
     }
 
@@ -785,14 +783,20 @@ a{
 @media screen and (min-width: 600px){
     .main_servicios{
         grid-template-columns: 100%;
-        grid-template-rows: 100px 150px 200px 250px 250px;
+        grid-template-rows: 100px 150px 200px 400px 400px;
         grid-template-areas: "s1"
                              "s2"
                              "s3"
                              "s4"
                              "s5";
         align-content: space-around;
+        justify-content: space-around;
         padding-bottom: 10px;
+        transition: all 3s;
+    }
+
+    .animated__animated.animate__bounce{
+        --animate-duration: 5s;
     }
     
     .titulo1_servicios{
@@ -821,7 +825,6 @@ a{
     .fila4_servicios{
         grid-area: s4;
         flex-direction: row;
-        justify-content: space-evenly;
     }
     
     .fila5_servicios{
@@ -854,20 +857,51 @@ a{
     }
     
     .escuelita{
-        grid-area: s10;
         width: 30%;
         font-size: 30px;
         font-weight: bolder;
     }
 
     .foto_serv1{
-        width: 30%;
-        height: 150%;
+        filter: grayscale(100%);
+    }
+
+    .foto_serv1:hover{
+        filter: grayscale(0);
+        transition: 3s;
+    }
+
+    .foto_serv1{
+        width: 40%;
+        height: 135%;
+        margin-left: 30%;
     }
 
     .foto_serv3{
-        width: 30%;
-        height: 150%;
+        filter: grayscale(100%);
+    }
+
+    .foto_serv3:hover{
+        filter: grayscale(0);
+        transition: 3s;
+    }
+
+    .foto_serv3{
+        width: 40%;
+        height: 135%;
+        margin-left: 20%;
+    }
+
+    .foto_serv2{
+        height: 120%;
+    }
+
+    .foto_serv4{
+        height: 129%;
+    }
+
+    .foto_serv5{
+        height: 129%;
     }
 }
 
