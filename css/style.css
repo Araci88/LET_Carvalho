@@ -618,14 +618,9 @@ a{
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 60px 100px 500px 350px 500px;
-        grid-template-areas: "s1"
-                             "s2"
-                             "s3"
-                             "s4"
-                             "s5";
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         align-content: center;
     }
 
@@ -637,13 +632,11 @@ a{
     }
 
     .titulo_servicios{
-        grid-area: s1;
         background-image: url(../img/tituloservicios.jpg);
         background-position: center;
     }
 
     .parrafos_clases{
-        grid-area: s2;
         align-self: center;
         background-color: rgb(255, 108, 55);
         color: rgb(17, 17, 17);
@@ -654,23 +647,14 @@ a{
     }
 
     .fila3_servicios{
-        grid-area: s3;
-        display: flex;
-        flex-direction: column;
         justify-content: center;
     }
 
     .fila4_servicios{
-        grid-area: s4;
-        display: flex;
-        flex-direction: column;
         align-items: center;
     }
 
     .fila5_servicios{
-        grid-area: s5;
-        display: flex;
-        flex-direction: column;
         align-items: center;
     }
 
@@ -711,7 +695,7 @@ a{
     }
 
     .entrenamiento{
-        width: 50%;
+        width: 55%;
         height: 20%;
         padding-top: 20px;
         text-align: center;
@@ -781,18 +765,9 @@ a{
 /* SERVICIOS PC*/
 
 @media screen and (min-width: 600px){
+
     .main_servicios{
-        grid-template-columns: 100%;
-        grid-template-rows: 100px 150px 200px 400px 400px;
-        grid-template-areas: "s1"
-                             "s2"
-                             "s3"
-                             "s4"
-                             "s5";
-        align-content: space-around;
-        justify-content: space-around;
-        padding-bottom: 10px;
-        transition: all 3s;
+        width: 100%;
     }
 
     .animated__animated.animate__bounce{
@@ -804,44 +779,40 @@ a{
     }
     
     .titulo_servicios{
-        grid-area: s1;
+        width: 100%;
+        height: 100px;
         background-repeat: repeat;
     }
     
     .parrafos_clases{
-        grid-area: s2;
-        align-self: center;
+        width: 100%;
+        height: 150px;
         text-align: center;
         font-size: 30px;
     }
     
     .fila3_servicios{
-        grid-area: s3;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
     }
     
     .fila4_servicios{
-        grid-area: s4;
         flex-direction: row;
     }
     
     .fila5_servicios{
-        grid-area: s5;
         flex-direction: row;
         justify-content: space-around;
     }
     
     .alquiler{
-        grid-area: s3;
         width: 30%;
         font-size: 25px; 
         font-weight: bolder;
     }
     
     .clases_ig{
-        grid-area: s4;
         width: 25%;
         font-size: 25px;
         font-weight: bolder;  
@@ -849,7 +820,6 @@ a{
     }
     
     .entrenamiento{
-        grid-area: s5;
         width: 30%;
         font-size: 25px;
         font-weight: bolder;
